@@ -4,7 +4,8 @@
 - **DO NOT USE TAURI**: The user strongly dislikes Tauri. Avoid proposing, scaffolding, or using Tauri for desktop applications or UI projects.
 - **DEFAULT TO C# .NET WPF**: Default to C# .NET (WPF with `net8.0-windows` / `net9.0-windows` on the modern .NET Core lineage) for Windows desktop apps.
 
-## WPF & Desktop UI Standards (No Aero Jank)
+## WPF & Desktop UI Standards (Integrated Window Chrome & No Aero Jank)
+- **INTEGRATED WINDOW CHROME & CUSTOM BORDERS**: ALL desktop applications must feature an integrated, custom-styled window titlebar (using `WindowChrome` or custom frameless chrome) with built-in branding, controls, and custom-colored border framing. Never rely on the default, generic OS titlebar/border. The top-level window must feel like a unified, cohesive, polished professional product with custom minimize, maximize, and close controls.
 - **STRICT CONTRAST & LEGIBILITY**: NEVER allow black-on-black or white-on-white text jank. All text inside `TreeViewItem`, `DataGrid`, `DataGridColumnHeader`, `DataGridRow`, `ComboBox`, `ComboBoxItem`, `TextBox`, and `ListView` must have explicit, high-contrast dark-mode typography (crisp white `#f0f6fc` / silver `#c9d1d9` text on dark surfaces).
 - **NO DEFAULT WPF THEME LEAKS**: Never rely on default Windows Aero/Classic control templates for dark themes. Always write full, custom dark `ControlTemplate` definitions with explicit background, foreground, border, hover, and selection triggers for every interactive control.
 
