@@ -1,7 +1,12 @@
 # Global User Rules & Memory
 
 ## Framework & Desktop Preferences
-- **DO NOT USE TAURI**: The user strongly dislikes Tauri. Avoid proposing, scaffolding, or using Tauri for desktop applications or UI projects. Use C# .NET (WPF / WinUI 3 / Avalonia), native platform toolkits, or other standard desktop architectures instead.
+- **DO NOT USE TAURI**: The user strongly dislikes Tauri. Avoid proposing, scaffolding, or using Tauri for desktop applications or UI projects.
+- **DEFAULT TO C# .NET WPF**: Default to C# .NET (WPF with `net8.0-windows` / `net9.0-windows` on the modern .NET Core lineage) for Windows desktop apps.
+
+## WPF & Desktop UI Standards (No Aero Jank)
+- **STRICT CONTRAST & LEGIBILITY**: NEVER allow black-on-black or white-on-white text jank. All text inside `TreeViewItem`, `DataGrid`, `DataGridColumnHeader`, `DataGridRow`, `ComboBox`, `ComboBoxItem`, `TextBox`, and `ListView` must have explicit, high-contrast dark-mode typography (crisp white `#f0f6fc` / silver `#c9d1d9` text on dark surfaces).
+- **NO DEFAULT WPF THEME LEAKS**: Never rely on default Windows Aero/Classic control templates for dark themes. Always write full, custom dark `ControlTemplate` definitions with explicit background, foreground, border, hover, and selection triggers for every interactive control.
 
 ## Git & PR Workflow
 - **No Unnecessary PRs**: Do NOT create Pull Requests for every single change. Only use PRs when explicitly requested or for massive full rewrites. Otherwise, commit directly to `main`.
