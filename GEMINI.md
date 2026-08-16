@@ -1,5 +1,8 @@
 # Global User Rules & Memory
 
+## Framework & Desktop Preferences
+- **DO NOT USE TAURI**: The user strongly dislikes Tauri. Avoid proposing, scaffolding, or using Tauri for desktop applications or UI projects. Use C# .NET (WPF / WinUI 3 / Avalonia), native platform toolkits, or other standard desktop architectures instead.
+
 ## Git & PR Workflow
 - **No Unnecessary PRs**: Do NOT create Pull Requests for every single change. Only use PRs when explicitly requested or for massive full rewrites. Otherwise, commit directly to `main`.
 - **Branch Synchronization & Targeted Deletions**: If a stale file or directory/component is removed from `main` (or abandoned) but lingers on `dev` (e.g., an obsolete TypeScript CLI), delete only that specific stale target from `dev` without hesitation. Never wipe, obliterate, or mess with the rest of `main` or valid branch contents.
